@@ -5,7 +5,7 @@ var beep = document.getElementById("beep");
 
 var create_dot = function(e){
     console.log(this.tagName);
-    if (this.tagName != "circle"){
+    if (this === e.target){
     console.log(this.tagName);
     e.preventDefault();
     var c1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -18,15 +18,11 @@ var create_dot = function(e){
     c1.addEventListener("click", change_color, true); 
     }
     else {
-	console.log("TAGNAME");
-	console.log(this.tagName);
-	console.log("TAGNAME == CIRCLE");
-	if (this.tagName == "circle"){
-	console.log("no new circle right");
+	console.log("else");
     }
 
 
-    }
+    
 }
 
     var change_color = function(e){
