@@ -47,7 +47,7 @@ var create_dot = function(e){
 	console.log("LOGGING THIS...");
 	console.log(this);
 	this.setAttribute("fill","blue");
-	this.addEventListener("click", function(){pic.removeChild(this); create_dot_random();});
+	this.addEventListener("click", function(){pic.removeChild(this); create_dot_random(); });
 	
 
     }
